@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator - Free Online Tool | WebTools Pro</title>
+    <meta name="description" content="Free online scientific calculator with advanced functions. Perform complex calculations with ease.">
+    <meta name="keywords" content="calculator, scientific calculator, online calculator, math calculator">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="fas fa-tools me-2"></i>WebTools Pro
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Tools
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../index.html#image-tools">Image Tools</a></li>
+                            <li><a class="dropdown-item" href="../index.html#code-tools">Code Tools</a></li>
+                            <li><a class="dropdown-item" href="../index.html#math-tools">Math Tools</a></li>
+                            <li><a class="dropdown-item" href="../index.html#converters">Converters</a></li>
+                            <li><a class="dropdown-item" href="../index.html#utilities">Utilities</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <div class="form-check form-switch me-3">
+                        <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                        <label class="form-check-label text-light" for="darkModeToggle">
+                            <i class="fas fa-moon"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="mt-4">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="../index.html#math-tools">Math Tools</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Calculator</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container py-4">
+        <!-- Tool Header -->
+        <div class="tool-header">
+            <h1><i class="fas fa-calculator me-2"></i>Advanced Calculator</h1>
+            <p>Scientific calculator with advanced functions for complex calculations.</p>
+        </div>
+
+        <!-- Ad Banner -->
+        <div class="ad-banner mb-4">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1234567890123456"
+                 data-ad-slot="1234567890"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- Calculator Container -->
+        <div class="row">
+            <!-- Calculator -->
+            <div class="col-lg-8">
+                <div class="tool-container">
+                    <!-- Display -->
+                    <div class="calculator-display mb-4">
+                        <div class="display-history" id="displayHistory"></div>
+                        <div class="display-current" id="displayCurrent">0</div>
+                    </div>
+
+                    <!-- Mode Tabs -->
+                    <ul class="nav nav-tabs mb-3" id="calculatorTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="standard-tab" data-bs-toggle="tab" data-bs-target="#standard" type="button" role="tab">
+                                <i class="fas fa-calculator me-1"></i>Standard
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="scientific-tab" data-bs-toggle="tab" data-bs-target="#scientific" type="button" role="tab">
+                                <i class="fas fa-square-root-alt me-1"></i>Scientific
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="programmer-tab" data-bs-toggle="tab" data-bs-target="#programmer" type="button" role="tab">
+                                <i class="fas fa-code me-1"></i>Programmer
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content" id="calculatorTabContent">
+                        <!-- Standard Calculator -->
+                        <div class="tab-pane fade show active" id="standard" role="tabpanel">
+                            <div class="calculator-buttons">
+                                <!-- Row 1 -->
+                                <div class="row g-2 mb-2">
+                                    <div class="col-3">
+                                        <button class="btn btn-outline-danger btn-calc" onclick="calculator.clear()">C</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-outline-warning btn-calc" onclick="calculator.clearEntry()">CE</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-outline-secondary btn-calc" onclick="calculator.backspace()">⌫</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-outline-primary btn-calc" onclick="calculator.operate('/')">÷</button>
+                                    </div>
+                                </div>
+                                <!-- Row 2 -->
+                                <div class="row g-2 mb-2">
+                                    <div class="col-3">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('7')">7</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('8')">8</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('9')">9</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-outline-primary btn-calc" onclick="calculator.operate('*')">×</button>
+                                    </div>
+                                </div>
+                                <!-- Row 3 -->
+                                <div class="row g-2 mb-2">
+                                    <div class="col-3">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('4')">4</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('5')">5</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('6')">6</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-outline-primary btn-calc" onclick="calculator.operate('-')">−</button>
+                                    </div>
+                                </div>
+                                <!-- Row 4 -->
+                                <div class="row g-2 mb-2">
+                                    <div class="col-3">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('1')">1</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('2')">2</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('3')">3</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-outline-primary btn-calc" onclick="calculator.operate('+')">+</button>
+                                    </div>
+                                </div>
+                                <!-- Row 5 -->
+                                <div class="row g-2 mb-2">
+                                    <div class="col-3">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('0')">0</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('.')">.</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-outline-secondary btn-calc" onclick="calculator.negate()">±</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-success btn-calc" onclick="calculator.calculate()">=</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Scientific Calculator -->
+                        <div class="tab-pane fade" id="scientific" role="tabpanel">
+                            <div class="calculator-buttons">
+                                <!-- Scientific Functions Row 1 -->
+                                <div class="row g-2 mb-2">
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('sin')">sin</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('cos')">cos</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('tan')">tan</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('log')">log</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('ln')">ln</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('sqrt')">√</button>
+                                    </div>
+                                </div>
+                                <!-- Scientific Functions Row 2 -->
+                                <div class="row g-2 mb-2">
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('asin')">asin</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('acos')">acos</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('atan')">atan</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('pow')">x^y</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('factorial')">x!</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('pi')">π</button>
+                                    </div>
+                                </div>
+                                <!-- Standard buttons (same as above but with scientific layout) -->
+                                <div class="row g-2 mb-2">
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-danger btn-calc" onclick="calculator.clear()">C</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-warning btn-calc" onclick="calculator.clearEntry()">CE</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-secondary btn-calc" onclick="calculator.backspace()">⌫</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-primary btn-calc" onclick="calculator.operate('/')">÷</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-primary btn-calc" onclick="calculator.operate('%')">%</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('e')">e</button>
+                                    </div>
+                                </div>
+                                <!-- Number pad -->
+                                <div class="row g-2 mb-2">
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('7')">7</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('8')">8</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('9')">9</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-primary btn-calc" onclick="calculator.operate('*')">×</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-primary btn-calc" onclick="calculator.operate('(')">(</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-primary btn-calc" onclick="calculator.operate(')')">)</button>
+                                    </div>
+                                </div>
+                                <div class="row g-2 mb-2">
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('4')">4</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('5')">5</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('6')">6</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-primary btn-calc" onclick="calculator.operate('-')">−</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('abs')">|x|</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('exp')">exp</button>
+                                    </div>
+                                </div>
+                                <div class="row g-2 mb-2">
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('1')">1</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('2')">2</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('3')">3</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-primary btn-calc" onclick="calculator.operate('+')">+</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('floor')">⌊x⌋</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('ceil')">⌈x⌉</button>
+                                    </div>
+                                </div>
+                                <div class="row g-2 mb-2">
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('0')">0</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('.')">.</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-secondary btn-calc" onclick="calculator.negate()">±</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-success btn-calc" onclick="calculator.calculate()">=</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('rand')">rand</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.scientific('deg')">deg</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Programmer Calculator -->
+                        <div class="tab-pane fade" id="programmer" role="tabpanel">
+                            <div class="calculator-buttons">
+                                <!-- Base Selection -->
+                                <div class="row g-2 mb-3">
+                                    <div class="col-3">
+                                        <button class="btn btn-outline-secondary btn-calc active" onclick="calculator.setBase(10)">DEC</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-outline-secondary btn-calc" onclick="calculator.setBase(16)">HEX</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-outline-secondary btn-calc" onclick="calculator.setBase(8)">OCT</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn btn-outline-secondary btn-calc" onclick="calculator.setBase(2)">BIN</button>
+                                    </div>
+                                </div>
+                                <!-- Bitwise Operations -->
+                                <div class="row g-2 mb-2">
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.bitwise('and')">AND</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.bitwise('or')">OR</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.bitwise('xor')">XOR</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.bitwise('not')">NOT</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.bitwise('lsh')"><<</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.bitwise('rsh')">>></button>
+                                    </div>
+                                </div>
+                                <!-- Standard buttons for programmer mode -->
+                                <div class="row g-2 mb-2">
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-danger btn-calc" onclick="calculator.clear()">C</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-warning btn-calc" onclick="calculator.clearEntry()">CE</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-secondary btn-calc" onclick="calculator.backspace()">⌫</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-primary btn-calc" onclick="calculator.operate('/')">÷</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-primary btn-calc" onclick="calculator.operate('%')">%</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-info btn-calc" onclick="calculator.bitwise('mod')">MOD</button>
+                                    </div>
+                                </div>
+                                <!-- Number pad (hex for programmer) -->
+                                <div class="row g-2 mb-2">
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('7')">7</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('8')">8</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('9')">9</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-primary btn-calc" onclick="calculator.operate('*')">×</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-primary btn-calc" onclick="calculator.operate('(')">(</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-primary btn-calc" onclick="calculator.operate(')')">)</button>
+                                    </div>
+                                </div>
+                                <div class="row g-2 mb-2">
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('4')">4</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('5')">5</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('6')">6</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-primary btn-calc" onclick="calculator.operate('-')">−</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('A')">A</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('B')">B</button>
+                                    </div>
+                                </div>
+                                <div class="row g-2 mb-2">
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('1')">1</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('2')">2</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('3')">3</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-primary btn-calc" onclick="calculator.operate('+')">+</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('C')">C</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('D')">D</button>
+                                    </div>
+                                </div>
+                                <div class="row g-2 mb-2">
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('0')">0</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('.')">.</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-outline-secondary btn-calc" onclick="calculator.negate()">±</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-success btn-calc" onclick="calculator.calculate()">=</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('E')">E</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-light btn-calc" onclick="calculator.append('F')">F</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Panel -->
+            <div class="col-lg-4">
+                <div class="tool-container">
+                    <h5><i class="fas fa-history me-2"></i>Calculation History</h5>
+                    <div id="historyList" class="history-list">
+                        <p class="text-muted text-center">No calculations yet</p>
+                    </div>
+                    <div class="d-grid gap-2 mt-3">
+                        <button class="btn btn-outline-secondary btn-sm" onclick="calculator.clearHistory()">
+                            <i class="fas fa-trash me-1"></i>Clear History
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- How to Use -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5><i class="fas fa-question-circle me-2"></i>How to Use</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h6>Standard Mode</h6>
+                        <ul>
+                            <li>Basic arithmetic operations</li>
+                            <li>Percentage calculations</li>
+                            <li>Clear and backspace functions</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h6>Scientific Mode</h6>
+                        <ul>
+                            <li>Trigonometric functions</li>
+                            <li>Logarithmic functions</li>
+                            <li>Power and root functions</li>
+                            <li>Constants (π, e)</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h6>Programmer Mode</h6>
+                        <ul>
+                            <li>Base conversions (DEC, HEX, OCT, BIN)</li>
+                            <li>Bitwise operations</li>
+                            <li>Logical operations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-shield-alt fa-2x text-primary mb-3"></i>
+                        <h6>Privacy First</h6>
+                        <p class="text-muted">All calculations are performed locally in your browser. No data is sent to servers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-brain fa-2x text-primary mb-3"></i>
+                        <h6>Advanced Functions</h6>
+                        <p class="text-muted">Scientific and programmer modes with hundreds of mathematical functions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-history fa-2x text-primary mb-3"></i>
+                        <h6>Calculation History</h6>
+                        <p class="text-muted">Keep track of your calculations with a detailed history that you can reuse.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-tools me-2"></i>WebTools Pro</h5>
+                    <p class="text-muted">
+                        Professional web tools for developers, designers, and professionals. 
+                        All tools are free to use and regularly updated.
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Image Tools</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="image-compressor.html" class="text-muted">Image Compressor</a></li>
+                        <li><a href="image-resizer.html" class="text-muted">Image Resizer</a></li>
+                        <li><a href="background-remover.html" class="text-muted">Background Remover</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Code Tools</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="html-formatter.html" class="text-muted">HTML Formatter</a></li>
+                        <li><a href="css-minifier.html" class="text-muted">CSS Minifier</a></li>
+                        <li><a href="json-viewer.html" class="text-muted">JSON Viewer</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Math Tools</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="calculator.html" class="text-muted">Calculator</a></li>
+                        <li><a href="percentage-calculator.html" class="text-muted">Percentage Calculator</a></li>
+                        <li><a href="equation-solver.html" class="text-muted">Equation Solver</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Utilities</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="qr-generator.html" class="text-muted">QR Generator</a></li>
+                        <li><a href="password-generator.html" class="text-muted">Password Generator</a></li>
+                        <li><a href="word-counter.html" class="text-muted">Word Counter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">&copy; 2024 WebTools Pro. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted me-3">Terms of Service</a>
+                    <a href="#" class="text-muted">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/calculator.js"></script>
+</body>
+</html> 

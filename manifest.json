@@ -1,0 +1,134 @@
+{
+  "name": "WebTools Pro - Professional Web Tools",
+  "short_name": "WebTools Pro",
+  "description": "100+ free online tools for developers, designers, and professionals. Image tools, code formatters, calculators, converters, and utilities.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007bff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["productivity", "utilities", "developer"],
+  "icons": [
+    {
+      "src": "assets/icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Image Compressor",
+      "short_name": "Compress",
+      "description": "Compress images online",
+      "url": "/tools/image-compressor.html",
+      "icons": [
+        {
+          "src": "assets/icons/compress-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "HTML Formatter",
+      "short_name": "Format",
+      "description": "Format HTML code",
+      "url": "/tools/html-formatter.html",
+      "icons": [
+        {
+          "src": "assets/icons/format-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Calculator",
+      "short_name": "Calc",
+      "description": "Advanced calculator",
+      "url": "/tools/calculator.html",
+      "icons": [
+        {
+          "src": "assets/icons/calc-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "QR Generator",
+      "short_name": "QR",
+      "description": "Generate QR codes",
+      "url": "/tools/qr-generator.html",
+      "icons": [
+        {
+          "src": "assets/icons/qr-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/screenshots/desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "WebTools Pro Desktop View"
+    },
+    {
+      "src": "assets/screenshots/mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "WebTools Pro Mobile View"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+} 

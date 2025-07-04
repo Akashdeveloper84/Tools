@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compressor - Free Online Tool | WebTools Pro</title>
+    <meta name="description" content="Free online image compressor. Reduce image file size without losing quality. Support for JPG, PNG, WebP formats.">
+    <meta name="keywords" content="image compressor, compress images, reduce image size, online image tool">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="fas fa-tools me-2"></i>WebTools Pro
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Tools
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../index.html#image-tools">Image Tools</a></li>
+                            <li><a class="dropdown-item" href="../index.html#code-tools">Code Tools</a></li>
+                            <li><a class="dropdown-item" href="../index.html#math-tools">Math Tools</a></li>
+                            <li><a class="dropdown-item" href="../index.html#converters">Converters</a></li>
+                            <li><a class="dropdown-item" href="../index.html#utilities">Utilities</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <div class="form-check form-switch me-3">
+                        <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                        <label class="form-check-label text-light" for="darkModeToggle">
+                            <i class="fas fa-moon"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="mt-4">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="../index.html#image-tools">Image Tools</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Image Compressor</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container py-4">
+        <!-- Tool Header -->
+        <div class="tool-header">
+            <h1><i class="fas fa-compress me-2"></i>Image Compressor</h1>
+            <p>Compress your images without losing quality. Support for JPG, PNG, and WebP formats.</p>
+        </div>
+
+        <!-- Ad Banner -->
+        <div class="ad-banner mb-4">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1234567890123456"
+                 data-ad-slot="1234567890"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- Tool Container -->
+        <div class="tool-container">
+            <!-- Upload Area -->
+            <div class="upload-area mb-4" id="uploadArea">
+                <div class="upload-content text-center p-5">
+                    <i class="fas fa-cloud-upload-alt fa-3x text-primary mb-3"></i>
+                    <h4>Drop your images here</h4>
+                    <p class="text-muted">or click to browse files</p>
+                    <input type="file" id="fileInput" multiple accept="image/*" class="d-none">
+                    <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
+                        <i class="fas fa-folder-open me-2"></i>Choose Files
+                    </button>
+                    <p class="text-muted mt-2">Supports: JPG, PNG, WebP (Max 10MB per file)</p>
+                </div>
+            </div>
+
+            <!-- Compression Settings -->
+            <div class="compression-settings mb-4">
+                <h5><i class="fas fa-cog me-2"></i>Compression Settings</h5>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="qualitySlider" class="form-label">Quality: <span id="qualityValue">80%</span></label>
+                        <input type="range" class="form-range" id="qualitySlider" min="1" max="100" value="80">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="formatSelect" class="form-label">Output Format</label>
+                        <select class="form-select" id="formatSelect">
+                            <option value="jpeg">JPEG</option>
+                            <option value="png">PNG</option>
+                            <option value="webp">WebP</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="maxWidth" class="form-label">Max Width (px)</label>
+                        <input type="number" class="form-control" id="maxWidth" placeholder="1920" value="1920">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="maxHeight" class="form-label">Max Height (px)</label>
+                        <input type="number" class="form-control" id="maxHeight" placeholder="1080" value="1080">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Images List -->
+            <div id="imagesList" class="d-none">
+                <h5><i class="fas fa-images me-2"></i>Images to Compress</h5>
+                <div id="imagesContainer" class="row g-3"></div>
+                
+                <div class="tool-actions">
+                    <button class="btn btn-primary btn-lg" id="compressBtn">
+                        <i class="fas fa-compress me-2"></i>Compress All Images
+                    </button>
+                    <button class="btn btn-outline-secondary btn-lg" id="clearBtn">
+                        <i class="fas fa-trash me-2"></i>Clear All
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div id="resultsContainer" class="d-none">
+                <h5><i class="fas fa-check-circle me-2 text-success"></i>Compression Results</h5>
+                <div id="resultsList" class="row g-3"></div>
+                
+                <div class="tool-actions">
+                    <button class="btn btn-success btn-lg" id="downloadAllBtn">
+                        <i class="fas fa-download me-2"></i>Download All
+                    </button>
+                    <button class="btn btn-outline-primary btn-lg" id="compressMoreBtn">
+                        <i class="fas fa-plus me-2"></i>Compress More Images
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- How to Use -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5><i class="fas fa-question-circle me-2"></i>How to Use</h5>
+            </div>
+            <div class="card-body">
+                <ol>
+                    <li>Drag and drop your images or click "Choose Files" to select them</li>
+                    <li>Adjust compression settings (quality, format, dimensions)</li>
+                    <li>Click "Compress All Images" to start compression</li>
+                    <li>Download individual images or all at once</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-shield-alt fa-2x text-primary mb-3"></i>
+                        <h6>Privacy First</h6>
+                        <p class="text-muted">Your images are processed locally in your browser. We never upload them to our servers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-bolt fa-2x text-primary mb-3"></i>
+                        <h6>Fast Processing</h6>
+                        <p class="text-muted">Advanced algorithms ensure fast compression while maintaining image quality.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-mobile-alt fa-2x text-primary mb-3"></i>
+                        <h6>Mobile Friendly</h6>
+                        <p class="text-muted">Works perfectly on all devices - desktop, tablet, and mobile phones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-tools me-2"></i>WebTools Pro</h5>
+                    <p class="text-muted">
+                        Professional web tools for developers, designers, and professionals. 
+                        All tools are free to use and regularly updated.
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Image Tools</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="image-compressor.html" class="text-muted">Image Compressor</a></li>
+                        <li><a href="image-resizer.html" class="text-muted">Image Resizer</a></li>
+                        <li><a href="background-remover.html" class="text-muted">Background Remover</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Code Tools</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="html-formatter.html" class="text-muted">HTML Formatter</a></li>
+                        <li><a href="css-minifier.html" class="text-muted">CSS Minifier</a></li>
+                        <li><a href="json-viewer.html" class="text-muted">JSON Viewer</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Math Tools</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="calculator.html" class="text-muted">Calculator</a></li>
+                        <li><a href="percentage-calculator.html" class="text-muted">Percentage Calculator</a></li>
+                        <li><a href="equation-solver.html" class="text-muted">Equation Solver</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Utilities</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="qr-generator.html" class="text-muted">QR Generator</a></li>
+                        <li><a href="password-generator.html" class="text-muted">Password Generator</a></li>
+                        <li><a href="word-counter.html" class="text-muted">Word Counter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">&copy; 2024 WebTools Pro. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted me-3">Terms of Service</a>
+                    <a href="#" class="text-muted">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/image-compressor.js"></script>
+</body>
+</html> 

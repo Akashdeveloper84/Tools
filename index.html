@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebTools Pro - 100+ Free Online Tools for Developers & Professionals</title>
+    <meta name="description" content="Free online tools for image editing, code formatting, math calculations, unit conversion, and more. Professional web tools for developers and professionals.">
+    <meta name="keywords" content="online tools, web tools, image tools, code tools, math tools, converters, utilities">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-tools me-2"></i>WebTools Pro
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Tools
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#image-tools">Image Tools</a></li>
+                            <li><a class="dropdown-item" href="#code-tools">Code Tools</a></li>
+                            <li><a class="dropdown-item" href="#math-tools">Math Tools</a></li>
+                            <li><a class="dropdown-item" href="#converters">Converters</a></li>
+                            <li><a class="dropdown-item" href="#utilities">Utilities</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <div class="form-check form-switch me-3">
+                        <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                        <label class="form-check-label text-light" for="darkModeToggle">
+                            <i class="fas fa-moon"></i>
+                        </label>
+                    </div>
+                    <button class="btn btn-outline-light btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">
+                        Professional Web Tools for <span class="text-primary">Everyone</span>
+                    </h1>
+                    <p class="lead mb-4">
+                        Access 100+ free online tools for image editing, code formatting, calculations, conversions, and more. 
+                        Built for developers, designers, and professionals.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#tools" class="btn btn-primary btn-lg">
+                            <i class="fas fa-rocket me-2"></i>Explore Tools
+                        </a>
+                        <a href="#popular" class="btn btn-outline-primary btn-lg">
+                            <i class="fas fa-star me-2"></i>Popular Tools
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <div class="tool-cards-preview">
+                            <div class="tool-card-preview" style="--delay: 0s">
+                                <i class="fas fa-image"></i>
+                                <span>Image Tools</span>
+                            </div>
+                            <div class="tool-card-preview" style="--delay: 0.2s">
+                                <i class="fas fa-code"></i>
+                                <span>Code Tools</span>
+                            </div>
+                            <div class="tool-card-preview" style="--delay: 0.4s">
+                                <i class="fas fa-calculator"></i>
+                                <span>Math Tools</span>
+                            </div>
+                            <div class="tool-card-preview" style="--delay: 0.6s">
+                                <i class="fas fa-exchange-alt"></i>
+                                <span>Converters</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Banner -->
+    <div class="ad-banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1234567890123456"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <!-- Tools Categories -->
+    <section id="tools" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mb-5">Tools by Category</h2>
+                </div>
+            </div>
+            
+            <!-- Image Tools -->
+            <div class="category-section mb-5" id="image-tools">
+                <h3 class="category-title">
+                    <i class="fas fa-image text-primary me-2"></i>Image Tools
+                </h3>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card" onclick="window.location.href='tools/image-compressor.html'">
+                            <div class="tool-icon">
+                                <i class="fas fa-compress"></i>
+                            </div>
+                            <h4>Image Compressor</h4>
+                            <p>Compress images without losing quality</p>
+                            <div class="tool-tags">
+                                <span class="badge bg-primary">Popular</span>
+                                <span class="badge bg-success">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card" onclick="window.location.href='tools/image-resizer.html'">
+                            <div class="tool-icon">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                            </div>
+                            <h4>Image Resizer</h4>
+                            <p>Resize images to any dimension</p>
+                            <div class="tool-tags">
+                                <span class="badge bg-success">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card" onclick="window.location.href='tools/background-remover.html'">
+                            <div class="tool-icon">
+                                <i class="fas fa-cut"></i>
+                            </div>
+                            <h4>Background Remover</h4>
+                            <p>Remove image backgrounds instantly</p>
+                            <div class="tool-tags">
+                                <span class="badge bg-warning">AI Powered</span>
+                                <span class="badge bg-success">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Code Tools -->
+            <div class="category-section mb-5" id="code-tools">
+                <h3 class="category-title">
+                    <i class="fas fa-code text-primary me-2"></i>Code Tools
+                </h3>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card" onclick="window.location.href='tools/html-formatter.html'">
+                            <div class="tool-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <h4>HTML Formatter</h4>
+                            <p>Format and beautify HTML code</p>
+                            <div class="tool-tags">
+                                <span class="badge bg-primary">Popular</span>
+                                <span class="badge bg-success">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card" onclick="window.location.href='tools/css-minifier.html'">
+                            <div class="tool-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <h4>CSS Minifier</h4>
+                            <p>Minify CSS for production</p>
+                            <div class="tool-tags">
+                                <span class="badge bg-success">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card" onclick="window.location.href='tools/json-viewer.html'">
+                            <div class="tool-icon">
+                                <i class="fas fa-brackets-curly"></i>
+                            </div>
+                            <h4>JSON Viewer</h4>
+                            <p>View and format JSON data</p>
+                            <div class="tool-tags">
+                                <span class="badge bg-success">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Math Tools -->
+            <div class="category-section mb-5" id="math-tools">
+                <h3 class="category-title">
+                    <i class="fas fa-calculator text-primary me-2"></i>Math Tools
+                </h3>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card" onclick="window.location.href='tools/calculator.html'">
+                            <div class="tool-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h4>Advanced Calculator</h4>
+                            <p>Scientific calculator with functions</p>
+                            <div class="tool-tags">
+                                <span class="badge bg-primary">Popular</span>
+                                <span class="badge bg-success">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card" onclick="window.location.href='tools/percentage-calculator.html'">
+                            <div class="tool-icon">
+                                <i class="fas fa-percentage"></i>
+                            </div>
+                            <h4>Percentage Calculator</h4>
+                            <p>Calculate percentages easily</p>
+                            <div class="tool-tags">
+                                <span class="badge bg-success">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card" onclick="window.location.href='tools/equation-solver.html'">
+                            <div class="tool-icon">
+                                <i class="fas fa-square-root-alt"></i>
+                            </div>
+                            <h4>Equation Solver</h4>
+                            <p>Solve mathematical equations</p>
+                            <div class="tool-tags">
+                                <span class="badge bg-success">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Converters -->
+            <div class="category-section mb-5" id="converters">
+                <h3 class="category-title">
+                    <i class="fas fa-exchange-alt text-primary me-2"></i>Converters
+                </h3>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card" onclick="window.location.href='tools/unit-converter.html'">
+                            <div class="tool-icon">
+                                <i class="fas fa-ruler"></i>
+                            </div>
+                            <h4>Unit Converter</h4>
+                            <p>Convert between different units</p>
+                            <div class="tool-tags">
+                                <span class="badge bg-primary">Popular</span>
+                                <span class="badge bg-success">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card" onclick="window.location.href='tools/currency-converter.html'">
+                            <div class="tool-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <h4>Currency Converter</h4>
+                            <p>Real-time currency conversion</p>
+                            <div class="tool-tags">
+                                <span class="badge bg-success">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card" onclick="window.location.href='tools/text-to-speech.html'">
+                            <div class="tool-icon">
+                                <i class="fas fa-volume-up"></i>
+                            </div>
+                            <h4>Text to Speech</h4>
+                            <p>Convert text to speech</p>
+                            <div class="tool-tags">
+                                <span class="badge bg-success">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Utilities -->
+            <div class="category-section mb-5" id="utilities">
+                <h3 class="category-title">
+                    <i class="fas fa-tools text-primary me-2"></i>Utilities
+                </h3>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card" onclick="window.location.href='tools/qr-generator.html'">
+                            <div class="tool-icon">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                            <h4>QR Code Generator</h4>
+                            <p>Generate QR codes for any text/URL</p>
+                            <div class="tool-tags">
+                                <span class="badge bg-primary">Popular</span>
+                                <span class="badge bg-success">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card" onclick="window.location.href='tools/password-generator.html'">
+                            <div class="tool-icon">
+                                <i class="fas fa-key"></i>
+                            </div>
+                            <h4>Password Generator</h4>
+                            <p>Generate secure passwords</p>
+                            <div class="tool-tags">
+                                <span class="badge bg-success">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card" onclick="window.location.href='tools/word-counter.html'">
+                            <div class="tool-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h4>Word Counter</h4>
+                            <p>Count words, characters, and more</p>
+                            <div class="tool-tags">
+                                <span class="badge bg-success">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Tools Section -->
+    <section id="popular" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mb-5">Most Popular Tools</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="popular-tool-card" onclick="window.location.href='tools/image-compressor.html'">
+                        <div class="popular-tool-icon">
+                            <i class="fas fa-compress"></i>
+                        </div>
+                        <h5>Image Compressor</h5>
+                        <p class="text-muted">Used 10K+ times today</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="popular-tool-card" onclick="window.location.href='tools/html-formatter.html'">
+                        <div class="popular-tool-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h5>HTML Formatter</h5>
+                        <p class="text-muted">Used 8K+ times today</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="popular-tool-card" onclick="window.location.href='tools/qr-generator.html'">
+                        <div class="popular-tool-icon">
+                            <i class="fas fa-qrcode"></i>
+                        </div>
+                        <h5>QR Generator</h5>
+                        <p class="text-muted">Used 6K+ times today</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="popular-tool-card" onclick="window.location.href='tools/calculator.html'">
+                        <div class="popular-tool-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h5>Calculator</h5>
+                        <p class="text-muted">Used 5K+ times today</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-tools me-2"></i>WebTools Pro</h5>
+                    <p class="text-muted">
+                        Professional web tools for developers, designers, and professionals. 
+                        All tools are free to use and regularly updated.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Image Tools</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="tools/image-compressor.html" class="text-muted">Image Compressor</a></li>
+                        <li><a href="tools/image-resizer.html" class="text-muted">Image Resizer</a></li>
+                        <li><a href="tools/background-remover.html" class="text-muted">Background Remover</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Code Tools</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="tools/html-formatter.html" class="text-muted">HTML Formatter</a></li>
+                        <li><a href="tools/css-minifier.html" class="text-muted">CSS Minifier</a></li>
+                        <li><a href="tools/json-viewer.html" class="text-muted">JSON Viewer</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Math Tools</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="tools/calculator.html" class="text-muted">Calculator</a></li>
+                        <li><a href="tools/percentage-calculator.html" class="text-muted">Percentage Calculator</a></li>
+                        <li><a href="tools/equation-solver.html" class="text-muted">Equation Solver</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Utilities</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="tools/qr-generator.html" class="text-muted">QR Generator</a></li>
+                        <li><a href="tools/password-generator.html" class="text-muted">Password Generator</a></li>
+                        <li><a href="tools/word-counter.html" class="text-muted">Word Counter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">&copy; 2024 WebTools Pro. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted me-3">Terms of Service</a>
+                    <a href="#" class="text-muted">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Search Tools</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="searchInput" placeholder="Search for tools...">
+                        <button class="btn btn-primary" type="button" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div id="searchResults" class="row g-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 

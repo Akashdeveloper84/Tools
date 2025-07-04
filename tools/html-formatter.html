@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Formatter - Free Online Tool | WebTools Pro</title>
+    <meta name="description" content="Free online HTML formatter and beautifier. Format HTML code with proper indentation and syntax highlighting.">
+    <meta name="keywords" content="html formatter, html beautifier, format html, html prettifier">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Prism.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="fas fa-tools me-2"></i>WebTools Pro
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Tools
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../index.html#image-tools">Image Tools</a></li>
+                            <li><a class="dropdown-item" href="../index.html#code-tools">Code Tools</a></li>
+                            <li><a class="dropdown-item" href="../index.html#math-tools">Math Tools</a></li>
+                            <li><a class="dropdown-item" href="../index.html#converters">Converters</a></li>
+                            <li><a class="dropdown-item" href="../index.html#utilities">Utilities</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <div class="form-check form-switch me-3">
+                        <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                        <label class="form-check-label text-light" for="darkModeToggle">
+                            <i class="fas fa-moon"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="mt-4">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="../index.html#code-tools">Code Tools</a></li>
+                <li class="breadcrumb-item active" aria-current="page">HTML Formatter</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container py-4">
+        <!-- Tool Header -->
+        <div class="tool-header">
+            <h1><i class="fab fa-html5 me-2"></i>HTML Formatter</h1>
+            <p>Format and beautify your HTML code with proper indentation and syntax highlighting.</p>
+        </div>
+
+        <!-- Ad Banner -->
+        <div class="ad-banner mb-4">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1234567890123456"
+                 data-ad-slot="1234567890"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- Tool Container -->
+        <div class="tool-container">
+            <!-- Formatting Options -->
+            <div class="formatting-options mb-4">
+                <h5><i class="fas fa-cog me-2"></i>Formatting Options</h5>
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <label for="indentSize" class="form-label">Indent Size</label>
+                        <select class="form-select" id="indentSize">
+                            <option value="2">2 spaces</option>
+                            <option value="4" selected>4 spaces</option>
+                            <option value="8">8 spaces</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="indentType" class="form-label">Indent Type</label>
+                        <select class="form-select" id="indentType">
+                            <option value="spaces" selected>Spaces</option>
+                            <option value="tabs">Tabs</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="maxLineLength" class="form-label">Max Line Length</label>
+                        <input type="number" class="form-control" id="maxLineLength" value="80" min="40" max="200">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="themeSelect" class="form-label">Theme</label>
+                        <select class="form-select" id="themeSelect">
+                            <option value="default">Default</option>
+                            <option value="dark">Dark</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Code Editor -->
+            <div class="code-editor mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5><i class="fas fa-code me-2"></i>Input HTML</h5>
+                    <div class="btn-group" role="group">
+                        <button class="btn btn-sm btn-outline-primary" id="loadSampleBtn">
+                            <i class="fas fa-file-code me-1"></i>Load Sample
+                        </button>
+                        <button class="btn btn-sm btn-outline-secondary" id="clearBtn">
+                            <i class="fas fa-trash me-1"></i>Clear
+                        </button>
+                    </div>
+                </div>
+                <div class="code-container">
+                    <textarea id="htmlInput" class="form-control code-textarea" rows="15" placeholder="Paste your HTML code here..."></textarea>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="tool-actions mb-4">
+                <button class="btn btn-primary btn-lg" id="formatBtn">
+                    <i class="fas fa-magic me-2"></i>Format HTML
+                </button>
+                <button class="btn btn-outline-primary btn-lg" id="minifyBtn">
+                    <i class="fas fa-compress me-2"></i>Minify HTML
+                </button>
+                <button class="btn btn-outline-secondary btn-lg" id="validateBtn">
+                    <i class="fas fa-check-circle me-2"></i>Validate HTML
+                </button>
+            </div>
+
+            <!-- Formatted Output -->
+            <div id="outputContainer" class="d-none">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5><i class="fas fa-eye me-2"></i>Formatted Output</h5>
+                    <div class="btn-group" role="group">
+                        <button class="btn btn-sm btn-outline-success" id="copyBtn">
+                            <i class="fas fa-copy me-1"></i>Copy
+                        </button>
+                        <button class="btn btn-sm btn-outline-info" id="downloadBtn">
+                            <i class="fas fa-download me-1"></i>Download
+                        </button>
+                    </div>
+                </div>
+                <div class="code-container">
+                    <pre id="htmlOutput" class="language-html"><code></code></pre>
+                </div>
+                
+                <!-- Statistics -->
+                <div class="row mt-3">
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <div class="fw-bold text-primary" id="originalLines">0</div>
+                            <small class="text-muted">Original Lines</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <div class="fw-bold text-success" id="formattedLines">0</div>
+                            <small class="text-muted">Formatted Lines</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <div class="fw-bold text-info" id="originalSize">0</div>
+                            <small class="text-muted">Original Size</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <div class="fw-bold text-warning" id="formattedSize">0</div>
+                            <small class="text-muted">Formatted Size</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- How to Use -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5><i class="fas fa-question-circle me-2"></i>How to Use</h5>
+            </div>
+            <div class="card-body">
+                <ol>
+                    <li>Paste your HTML code in the input area or click "Load Sample" for an example</li>
+                    <li>Adjust formatting options (indent size, type, line length)</li>
+                    <li>Click "Format HTML" to beautify your code</li>
+                    <li>Use "Minify HTML" to compress the code</li>
+                    <li>Copy or download the formatted code</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-shield-alt fa-2x text-primary mb-3"></i>
+                        <h6>Privacy First</h6>
+                        <p class="text-muted">Your code is processed locally in your browser. We never upload it to our servers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-palette fa-2x text-primary mb-3"></i>
+                        <h6>Syntax Highlighting</h6>
+                        <p class="text-muted">Beautiful syntax highlighting with multiple themes for better code readability.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-cogs fa-2x text-primary mb-3"></i>
+                        <h6>Customizable</h6>
+                        <p class="text-muted">Adjust indentation, line length, and formatting options to match your preferences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-tools me-2"></i>WebTools Pro</h5>
+                    <p class="text-muted">
+                        Professional web tools for developers, designers, and professionals. 
+                        All tools are free to use and regularly updated.
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Image Tools</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="image-compressor.html" class="text-muted">Image Compressor</a></li>
+                        <li><a href="image-resizer.html" class="text-muted">Image Resizer</a></li>
+                        <li><a href="background-remover.html" class="text-muted">Background Remover</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Code Tools</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="html-formatter.html" class="text-muted">HTML Formatter</a></li>
+                        <li><a href="css-minifier.html" class="text-muted">CSS Minifier</a></li>
+                        <li><a href="json-viewer.html" class="text-muted">JSON Viewer</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Math Tools</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="calculator.html" class="text-muted">Calculator</a></li>
+                        <li><a href="percentage-calculator.html" class="text-muted">Percentage Calculator</a></li>
+                        <li><a href="equation-solver.html" class="text-muted">Equation Solver</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Utilities</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="qr-generator.html" class="text-muted">QR Generator</a></li>
+                        <li><a href="password-generator.html" class="text-muted">Password Generator</a></li>
+                        <li><a href="word-counter.html" class="text-muted">Word Counter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">&copy; 2024 WebTools Pro. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted me-3">Terms of Service</a>
+                    <a href="#" class="text-muted">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Prism.js for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/html-formatter.js"></script>
+</body>
+</html> 
